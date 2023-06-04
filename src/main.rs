@@ -11,7 +11,7 @@ fn main() {
     let matches = command!()
         .arg(
             arg!(
-                --region -r [REGION] "Region to get results for"
+                -r --region [REGION] "Region to get results for"
             )
                 .required(false)
                 .value_parser(value_parser!(String)),
@@ -67,7 +67,6 @@ fn main() {
              region_data_2014.seats_overall,
              region_data_2014.seats_per_party.gruene,
     );
-    let test = region_data_2019.eligible_voters - region_data_2014.eligible_voters;
     println!("Differenz: {0: <15} | {1: <15} | {2: <17} | {3: <15} | {4: <14} | {5: <12} | {6: <15}",
              region_data_2019.eligible_voters - region_data_2014.eligible_voters,
              format!("{0: <6} | {1: <6.1}", region_data_2019.voters - region_data_2014.voters, region_data_2019.voter_turnout - region_data_2014.voter_turnout),
