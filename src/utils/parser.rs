@@ -5,9 +5,10 @@ pub fn parse_to_int(s: String) -> isize {
     s.parse::<isize>().unwrap()
 }
 
-pub fn parse_to_float(s: String) -> f64 {
+pub fn parse_to_float(s: String) -> f32 {
     if s == "" {
         return 0.0;
     }
-    s.replace(",", ".").parse::<f64>().unwrap()
+    s.replace(",", ".").parse::<f32>().unwrap()
 }
+

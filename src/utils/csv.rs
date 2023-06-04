@@ -15,3 +15,4 @@ pub fn get_csv_data(filename: &str) -> Vec<Vec<String>> {
     }
     data2019
 }
+

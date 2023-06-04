@@ -77,3 +77,4 @@ fn main() {
              region_data_2019.seats_per_party.gruene - region_data_2014.seats_per_party.gruene,
     );
 }
+

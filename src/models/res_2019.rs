@@ -15,9 +15,9 @@ pub struct ElectionResult {
     pub seats_overall: isize,
     pub votes_per_party: party::PartyResultInt,
     pub seats_per_party: party::PartyResultInt,
-    pub voter_turnout: f64,
-    pub invalid_ballots_percent: f64,
-    pub valid_ballots_percent: f64,
+    pub voter_turnout: f32,
+    pub invalid_ballots_percent: f32,
+    pub valid_ballots_percent: f32,
     pub votes_per_party_percent: party::PartyResultFloat,
     pub last_updated: String,
 }
@@ -35,9 +35,9 @@ impl ElectionResult {
         seats_overall: isize,
         votes_per_party: party::PartyResultInt,
         seats_per_party: party::PartyResultInt,
-        voter_turnout: f64,
-        invalid_ballots_percent: f64,
-        valid_ballots_percent: f64,
+        voter_turnout: f32,
+        invalid_ballots_percent: f32,
+        valid_ballots_percent: f32,
         seats_per_party_percent: party::PartyResultFloat,
         last_updated: String,
     ) -> ElectionResult {
@@ -124,3 +124,4 @@ pub fn get_election_results(filename: &str) -> Vec<ElectionResult> {
     }
     election_results
 }
+
